@@ -259,9 +259,9 @@ namespace Microsoft.Bot.Builder.Expressions.Tests
             Test("join(foreach(items, item, concat(item, string(count(items)))), ',')", "zero3,one3,two3", new HashSet<string>{ "items"}),
 
             //Memory access
-             Test("first(nestedItems).x", 1, new HashSet<string> { "nestedItems"}),
-             Test("property(bag, concat('na','me'))","mybag")
-
+            Test("first(nestedItems).x", 1, new HashSet<string> { "nestedItems"}),
+            Test("property(bag, concat('na','me'))","mybag"),
+            Test("bag['name']","mybag")
         };
 
         [DataTestMethod]
