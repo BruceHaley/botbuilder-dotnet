@@ -261,7 +261,8 @@ namespace Microsoft.Bot.Builder.Expressions.Tests
             //Memory access
             Test("first(nestedItems).x", 1, new HashSet<string> { "nestedItems"}),
             Test("property(bag, concat('na','me'))","mybag"),
-            Test("bag['name']","mybag")
+            Test("bag['name']","mybag"),
+            Test("bag[substring(concat('na','me','more'), 0, length('name'))]","mybag"),
         };
 
         [DataTestMethod]

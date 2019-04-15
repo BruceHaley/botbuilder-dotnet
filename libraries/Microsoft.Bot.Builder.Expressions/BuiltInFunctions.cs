@@ -598,7 +598,7 @@ namespace Microsoft.Bot.Builder.Expressions
                         }
                         else
                         {
-                            error = $"{instance} is not a collection.";
+                            error = $"type of ({instance}, {idx}) should be (object, string) or (collection, int)";
                         }
                     }
                     else if(idxValue is string idxStr)
@@ -607,7 +607,7 @@ namespace Microsoft.Bot.Builder.Expressions
                     }
                     else
                     {
-                        error = $"Could not coerce {index} to an int.";
+                        error = $"Could not coerce {index} to an int or string";
                     }
                 }
             }
