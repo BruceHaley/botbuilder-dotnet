@@ -263,6 +263,7 @@ namespace Microsoft.Bot.Builder.Expressions.Tests
             Test("property(bag, concat('na','me'))","mybag"),
             Test("bag['name']","mybag"),
             Test("bag[substring(concat('na','me','more'), 0, length('name'))]","mybag"),
+            Test("items[1+1]","two"),
         };
 
         [DataTestMethod]
